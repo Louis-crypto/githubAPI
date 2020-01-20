@@ -1,6 +1,6 @@
 # GithubApi
 # Louis Odhiambo
-## 12/1/2020
+## 21/1/2020
 
 ## Description
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.Its an app where the user can search for repositories and github users using the github api.[The project can be viewed here]( https://louis-crypto.github.io/githubAPI/)
