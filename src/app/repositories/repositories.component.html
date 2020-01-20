@@ -1,28 +1,17 @@
-<div text-align="center"  class="row">
-  <h3>My Repositories:</h3>
-  <div *ngFor='let r of repos'>
-    <table class="table">
-      <thead>
+<div class='card' class='container'>
+  <h3 class='card-title'>My Repositories:</h3><br>
+  <div *ngFor='let repository of repos'>
+    <table class='card-body' class="table">
         <tr>
           <th>Repo ID</th>
           <th>Repo Name</th>
           <th>Repo URL</th>
-
-          <th style="width: 50px;"></th>
         </tr>
-      </thead>
-      <tbody>
         <tr>
-
-        <tr>
-          <td>{{r.id}}</td>
-          <td><strong appFontSwitcher>{{r.name}}</strong></td>
-          <td><a href="{{r.url}}">{{r.url}}</a></td>
+          <td>{{repository.id}}</td>
+          <td><strong appFontSwitcher>{{repository.name}}</strong></td>
+          <td><a href="{{repository.url}}">{{repository.url}}</a></td>
         </tr>
-
-
-
-      </tbody>
     </table>
 </div>
 </div>

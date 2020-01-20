@@ -19,18 +19,14 @@ repos: any;
             Authorization: `Bearer ${environment.accessToken}`
           }
       }).toPromise().then(response => {
-
             this.repos = response;
-          //  console.log(this.repos.id);
             console.log(this.repos);
             resolve();
-      },
-      error => {
+      },error => {
         console.log('Something went wrong');
         reject(error);
       });
     });
     return promise;
   }
-
 }

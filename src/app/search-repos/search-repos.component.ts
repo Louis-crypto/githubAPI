@@ -10,7 +10,7 @@ import {environment} from '../../environments/environment';
 export class SearchReposComponent implements OnInit {
 repos: any;
 s: string;
-baseUrl: 'https://api.github.com/search/';
+
   constructor(private http: HttpClient) { }
 
   repoSearch() {
@@ -22,7 +22,7 @@ baseUrl: 'https://api.github.com/search/';
     }
 
     const promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>(`${this.baseUrl}repositories?q=${this.s}+language:javascript&sort=stars&order=desc`, {
+      this.http.get<ApiResponse>(`${environment.searchUrl}repositories?q=${this.s}+language:javascript&sort=stars&order=desc`, {
           headers: {
             Authorization: `Bearer ${environment.accessToken}`
           }
