@@ -13,14 +13,12 @@ export class ProfileComponent implements OnInit {
   user: User;
 
 
-  constructor(private userService: ProfileService) { }
+  constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
-    this.userService.userRequest();
-    this.user = this.userService.user;
+    this.profileService.userRequest();
+    this.user = this.profileService.user;
 
-    // this.userService.repoRequest();
-    // this.repos = this.userService.repos;
   }
 
 }
