@@ -10,35 +10,27 @@ import { FormsModule } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
 
-users: any;
-q: string;
   constructor(private http: HttpClient) { }
+  users: any;
+  find: string;
 
-
-  userSearch() {
-
+  findProfile() {
     const promise = new Promise((resolve, reject) => {
-      this.http.get(`${environment.searchUrl}users?q=${this.q}+repos:%3E15+followers:%3E0`, {
+      this.http.get(`${environment.searchUrl}users?q=${this.find}+repos:%3E15+followers:%3E0`, {
           headers: {
             Authorization: `Bearer ${environment.accessToken}`
           }
       }).toPromise().then(response => {
-
             this.users = response['items'];
-          //  console.log(this.repos.id);
             console.log(response);
-            //console.log(this.q);
             resolve();
       },
       error => {
-        console.log('This isn\'t working');
+        console.log('Something went wrong');
         reject(error);
       });
     });
     return promise;
   }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

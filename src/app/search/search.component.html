@@ -1,8 +1,8 @@
 <div class="container">
-  <div text-align="center">
-  <form  (ngSubmit)='userSearch()'>
-  <input class="input" name="q" [(ngModel)]="q">
-  <button  class="btn btn-success" type="submit">SEARCH</button><br>
+  <div>
+  <form  (ngSubmit)='findProfile()'>
+  <input class="input" name="find" [(ngModel)]="find">
+  <button type="submit">SEARCH</button><br>
   </form>
   <div  class="row">
     <div *ngFor='let u of users'>

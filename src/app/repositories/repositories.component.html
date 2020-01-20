@@ -1,15 +1,13 @@
 <div class='card' class='container'>
   <h3 class='card-title'>My Repositories:</h3><br>
   <div *ngFor='let repository of repos'>
-    <table class='card-body' class="table">
+    <table class='card-body' class="table table-hover">
         <tr>
-          <th>Repo ID</th>
-          <th>Repo Name</th>
-          <th>Repo URL</th>
+          <th>Repository Name</th>
+          <th>Repository URL</th>
         </tr>
         <tr>
-          <td>{{repository.id}}</td>
-          <td><strong appFontSwitcher>{{repository.name}}</strong></td>
+          <td>{{repository.name}}</td>
           <td><a href="{{repository.url}}">{{repository.url}}</a></td>
         </tr>
     </table>
