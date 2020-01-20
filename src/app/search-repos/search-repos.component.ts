@@ -9,11 +9,11 @@ import {environment} from '../../environments/environment';
 })
 export class SearchReposComponent implements OnInit {
 repos: any;
-s: string;
+set: string;
 
   constructor(private http: HttpClient) { }
 
-  repoSearch() {
+  findRepo() {
     interface ApiResponse {
       name: string;
       html_url: string;
@@ -22,7 +22,7 @@ s: string;
     }
 
     const promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>(`${environment.searchUrl}repositories?q=${this.s}+language:javascript&sort=stars&order=desc`, {
+      this.http.get<ApiResponse>(`${environment.searchUrl}repositories?q=${this.set}+language:javascript&sort=stars&order=desc`, {
           headers: {
             Authorization: `Bearer ${environment.accessToken}`
           }
@@ -31,7 +31,7 @@ s: string;
             this.repos = response['items'];
           //  console.log(this.repos.id);
             console.log(this.repos);
-            console.log(this.s);
+            console.log(this.set);
             resolve();
       },
       error => {

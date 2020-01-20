@@ -1,26 +1,22 @@
 <div class="container">
   <div>
   <form  (ngSubmit)='findProfile()'>
-  <input class="input" name="find" [(ngModel)]="find">
+  <input class="input" name="tes" [(ngModel)]="tes">
   <button type="submit"><i class="fa fa-search"></i></button>
   </form>
-  <div  class="row">
+  <div>
     <div *ngFor='let u of users'>
-      <table class="table info-bio">
-        <tbody>
-          <tr>
-            <th scope="row">Username:</th>
-            <td> <a routerLink="/users/{{ u.login }}">{{ u.login }}</a> </td>
-          </tr>
-          <tr>
-            <th scope="row">Profile Photo:</th>
-            <td><img src="{{u.avatar_url}}" alt="" width="100px" height="100px"></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="card">
+          <div class='card-title'>
+            <h3>Username:</h3>
+            <p> <a routerLink="/users/{{ u.login }}">{{ u.login }}</a></p>
+          </div>
+          <div class='card-img-bottom'>
+            <p>Profile Photo:</p>
+            <img src="{{u.avatar_url}}" width="200px" height="300px">
+          </div>
+        </div>
   </div>
   </div>
-  
-  
   </div>
   </div>

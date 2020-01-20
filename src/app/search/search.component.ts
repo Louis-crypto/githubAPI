@@ -12,11 +12,11 @@ export class SearchComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
   users: any;
-  find: string;
+  tes: string;
 
   findProfile() {
     const promise = new Promise((resolve, reject) => {
-      this.http.get(`${environment.searchUrl}users?q=${this.find}+repos:%3E15+followers:%3E0`, {
+      this.http.get(`${environment.searchUrl}users?q=${this.tes}+repos:%3E15+followers:%3E0`, {
           headers: {
             Authorization: `Bearer ${environment.accessToken}`
           }
