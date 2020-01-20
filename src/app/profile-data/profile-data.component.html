@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div  *ngFor='let u of user'>
+
+    <!-- <h3>{{u.name}}</h3>
+    <h4>{{u.url}}</h4> -->
+    <div class="card">
+      <h5 class="card-header">{{u.owner.login}}</h5>
+      <div class="card-body">
+        <h5 appFontSwitcher class="card-title">Repo Name:{{u.name}}</h5>
+        <p class="card-text">Created at:{{u.created_at}}</p>
+        Repository URL:<a href="{{u.url}}" >{{u.url}}</a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>

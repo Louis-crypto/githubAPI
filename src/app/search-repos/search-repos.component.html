@@ -1,0 +1,38 @@
+<div class="container">
+  <h3>Search for Repositories:</h3>
+<div text-align="center">
+  <form  (ngSubmit)='repoSearch()'>
+  <input class="input" name="s" [(ngModel)]="s">
+  <button  class="btn btn-success" type="submit">SEARCH</button><br>
+  </form>
+
+  <div  class="row">
+    <div *ngFor='let r of repos'>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Repo ID</th>
+            <th>Repo Name</th>
+            <th>Repo URL</th>
+            <th>Repo Owner</th>
+
+            <th style="width: 50px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+          <tr>
+            <td>{{r.id}}</td>
+            <td><strong appFontSwitcher>{{r.name}}</strong></td>
+            <td><a href="{{r.url}}">{{r.url}}</a></td>
+            <td>{{r.owner.login}}</td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+  </div>
+  </div>
+</div>

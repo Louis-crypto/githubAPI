@@ -1,0 +1,26 @@
+<div class="container">
+  <div text-align="center">
+  <form  (ngSubmit)='userSearch()'>
+  <input class="input" name="q" [(ngModel)]="q">
+  <button  class="btn btn-success" type="submit">SEARCH</button><br>
+  </form>
+  <div  class="row">
+    <div *ngFor='let u of users'>
+      <table class="table info-bio">
+        <tbody>
+          <tr>
+            <th scope="row">Username:</th>
+            <td> <a routerLink="/users/{{ u.login }}">{{ u.login }}</a> </td>
+          </tr>
+          <tr>
+            <th scope="row">Profile Photo:</th>
+            <td><img src="{{u.avatar_url}}" alt="" width="100px" height="100px"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  </div>
+  
+  
+  </div>
+  </div>
