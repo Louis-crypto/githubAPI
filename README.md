@@ -1,6 +1,15 @@
 # GithubApi
+# Louis Odhiambo
+## 12/1/2020
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+## Description
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.Its an app where the user can search for repositories and github users using the github api.[The project can be viewed here]( https://louis-crypto.github.io/Quotes/)
+
+### Technologies used
+* HTML 
+* CSS
+* Typescript
+* Javascript
 
 ## Development server
 
@@ -22,6 +31,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+### support and contact details
+You can conribute to my code and help me grow, contact me via;
+* +254 741 534 863 
+* odhiambolouis745@gmail.com
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+This project is licensed under the terms of the MIT license. Copyright (C) 2019
