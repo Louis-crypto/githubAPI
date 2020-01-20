@@ -1,38 +1,23 @@
 <div class="container">
   <h3>Search for Repositories:</h3>
-<div text-align="center">
-  <form  (ngSubmit)='findRepo()'>
-  <input class="input" name="set" [(ngModel)]="set">
-  <button type="submit"><i class="fa fa-search"></i></button>
-  </form>
+  <div text-align="center">
+    <form (ngSubmit)='findRepo()'>
+      <input class="input" name="set" [(ngModel)]="set">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
 
-  <div  class="panel-group">
-    <div class='panel panel-default' *ngFor='let r of repos'>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Repo ID</th>
-            <th>Repo Name</th>
-            <th>Repo URL</th>
-            <th>Repo Owner</th>
-
-            <th style="width: 50px;"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-
-          <tr>
-            <td>{{r.id}}</td>
-            <td><strong appFontSwitcher>{{r.name}}</strong></td>
-            <td><a href="{{r.url}}">{{r.url}}</a></td>
-            <td>{{r.owner.login}}</td>
-          </tr>
-
-
-
-        </tbody>
-      </table>
+    <div class="card" >
+      <div class='' *ngFor='let r of repos'>
+        <div class="card-title">
+            <h3>Repo title :</h3>{{r.name}}
+          </div>
+          <div class='card-body'>
+              <h3>Repo ID :</h3>{{r.id}}         
+              <h3>Repo link :</h3><a href="{{r.url}}">{{r.url}}</a>
+          </div>
+          <div class='card-footer'>
+              <p>Username :{{r.owner.login}}</p>
+          </div>
+      </div>
+    </div>
   </div>
-  </div>
-</div>

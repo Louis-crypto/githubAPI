@@ -29,7 +29,6 @@ set: string;
       }).toPromise().then(response => {
 
             this.repos = response['items'];
-          //  console.log(this.repos.id);
             console.log(this.repos);
             console.log(this.set);
             resolve();
