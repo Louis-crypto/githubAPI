@@ -1,0 +1,22 @@
+<div class="container">
+  <div>
+  <form  (ngSubmit)='findProfile()'>
+  <input class="input" name="tes" [(ngModel)]="tes">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+  <div>
+    <div *ngFor='let prof of users'>
+      <div class="card">
+          <div class='card-title'>
+            <h3>Username:</h3>
+            <p> <a routerLink="/users/{{ prof.login }}">{{ prof.login }}</a></p>
+          </div>
+          <div class='card-img-bottom'>
+            <p>Profile Photo:</p>
+            <img src="{{prof.avatar_url}}" width="200px" height="300px">
+          </div>
+        </div>
+  </div>
+  </div>
+  </div>
+  </div>

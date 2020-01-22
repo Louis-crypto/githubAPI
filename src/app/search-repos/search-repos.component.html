@@ -1,0 +1,22 @@
+<div class="container">
+  <div id="header">
+  <h3>Search for Repositories:</h3>
+  <div text-align="center">
+    <form (ngSubmit)='findRepo()'>
+      <input class="input" name="set" [(ngModel)]="set">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+    <div class="card" >
+      <div class='' *ngFor='let repO of repos'>
+        <div class="card-title">
+            <h3>Repository title :</h3>{{repO.name}}
+          </div>
+          <div class='card-body'>
+              <h3>Username:</h3>{{repO.owner.login}}         
+              <h3>Github link :</h3><a href="{{repO.url}}">{{repO.url}}</a>
+          </div>
+      </div>
+    </div>
+  </div>

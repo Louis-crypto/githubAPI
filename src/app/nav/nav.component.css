@@ -1,0 +1,21 @@
+h2{
+  font-size: 50px;
+}
+nav{
+  background-image: url(../../assets/navbg.jpeg);
+  background-size: cover;
+  color: white;
+  padding: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+nav ul li {
+  list-style: none;
+  text-align: center;
+  display: inline-block;
+}
+nav ul li a{
+  text-decoration: underline;
+  padding: 15px;
+  background-color: white;
+}

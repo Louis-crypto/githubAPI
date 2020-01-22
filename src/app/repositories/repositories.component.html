@@ -1,0 +1,9 @@
+<div class='card' class='container'>
+  <h3 class='card-title'>Repositories:</h3><br>
+  <div *ngFor='let repository of repos'>
+    <div class='card'>
+          <p>Repository Name: {{repository.name}}</p>
+          <p>Repository URL: <a href="{{repository.url}}">{{repository.url}}</a></p>
+      </div>
+</div>
+</div>
