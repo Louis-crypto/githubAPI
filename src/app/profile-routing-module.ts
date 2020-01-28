@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileDataComponent } from './profile-data/profile-data.component';
 import { SearchReposComponent } from './search-repos/search-repos.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/users', pathMatch: 'full'},
   {path: 'users', component: ProfileComponent},
   {path: 'users/:username', component: ProfileDataComponent},
   {path:'repos',component:SearchReposComponent},
+  { path:'**', component:NotFoundComponent},
 
 ];
 
