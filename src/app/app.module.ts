@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchComponent } from './search/search.component';
@@ -11,6 +10,8 @@ import { ProfileRoutingModule } from './profile-routing-module';
 import { NavComponent } from './nav/nav.component';
 import { ProfileDataComponent } from './profile-data/profile-data.component';
 import { SearchReposComponent } from './search-repos/search-repos.component';
+import { ProfileService } from './profile-service/profile.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,16 +21,16 @@ import { SearchReposComponent } from './search-repos/search-repos.component';
     RepositoriesComponent,
     NavComponent,
     ProfileDataComponent,
-    SearchReposComponent
+    SearchReposComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ProfileRoutingModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

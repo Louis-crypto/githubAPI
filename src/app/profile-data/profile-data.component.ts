@@ -17,9 +17,10 @@ export class ProfileDataComponent implements OnInit {
     this.route.params.subscribe(params => {
       const username = params.username;
       this.profileService
-          .getUser(username)
-          .subscribe(response =>{this.user = response;
-          })
+        .getUser(username)
+        .subscribe(response => {
+        this.user = response;
+        })
     });
   }
 
